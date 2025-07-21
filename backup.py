@@ -8,19 +8,19 @@ class BackupUnit:
         self.camera = camera
 
     def monitor(self):
-        print("[BackupUnit] Monitoring Camera...")
+        print("BackupUnit  Monitoring Camera...")
         if self.camera.status == "Inactive":
             self.handle_failure()
         else:
-            print("[BackupUnit] Camera OK.\n")
+            print("BackupUnit Camera OK.\n")
 
     def handle_failure(self):
-        print("[BackupUnit] Camera Failure! Taking Backup Actions.")
+        print("BackupUnit Camera Failure! Taking Backup Actions.")
         self.capture_images()
         trigger_sos()
 
     def capture_images(self):
-        print("[BackupUnit] Capturing Images...")
-        for i in range(3):
+        print("BackupUnit Capturing Images...")
+        for i in range(5):
             print(f"        Image {i+1} captured.")
             time.sleep(5)

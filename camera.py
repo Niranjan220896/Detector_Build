@@ -8,7 +8,7 @@ class Camera:
         fault = random.choice([True, False, False])  # 33% chance to fail
         if fault:
             self.status = "Inactive"
-            print("[Camera] ERROR: Camera Failure Detected!")
+            print("Camera ERROR: Camera Failure Detected!")
         else:
             self.status = "Active"
-            print("[Camera] Camera is Working Normally.")
+            print(" Camera is Working Normally.")
